@@ -20,11 +20,7 @@ public class TelegramBot extends TelegramLongPollingBot {
             sendMessage.setChatId(chatId);
             sendMessage.setText("Привет, " + firstname + ", введи сюда свои сумму и на что потратил!");
             
-            try {
-                this.execute(sendMessage);
-            } catch (TelegramApiException e) {
-                throw new RuntimeException(e);
-            }
+            
         } else {
             sendMessage.setChatId(chatId);
             sendMessage.setText(text);
